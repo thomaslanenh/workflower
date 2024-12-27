@@ -14,7 +14,7 @@ const SelectWorkflow = () => {
 
     const handleCustomChange = async (value) => {
 
-        if(value === "custom_object"){
+        if(value === "customobject"){
             setIsCustom(true);
         }
         else{
@@ -35,7 +35,7 @@ const SelectWorkflow = () => {
                             workflow: values.workflow_type,
                         }
                     })
-//
+
                     if(values.custom_object_id){
                         dispatch({
                             action: "set_custom_object_id",
