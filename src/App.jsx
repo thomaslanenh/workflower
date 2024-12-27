@@ -13,6 +13,14 @@ function App() {
     const current_stage = useWorkflowerStore(state => state.current_stage)
 
 
+    const returnHome = () =>{
+        dispatch({
+            action: "change_stage",
+            payload: {
+                current_stage: "home"
+            }
+        })
+    }
     const renderCurrentStage = () => {
         switch(current_stage){
             case "home":
@@ -47,7 +55,7 @@ function App() {
 
     return (
         <div>
-            <h1>Workflower 🌸</h1>
+            <h1 onClick={returnHome}>🌸 Workflower 🌸</h1>
             {renderCurrentStage()}
         </div>
     )
