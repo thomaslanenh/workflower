@@ -17,10 +17,11 @@ function App() {
         dispatch({
             action: "change_stage",
             payload: {
-                current_stage: "home"
+                new_stage: "home"
             }
         })
     }
+
     const renderCurrentStage = () => {
         switch(current_stage){
             case "home":
