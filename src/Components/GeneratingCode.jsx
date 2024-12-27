@@ -113,12 +113,13 @@ const GeneratingCode = () => {
                     <span style={{fontStyle: "italic", fontSize: 11}}>{quotes[Math.floor(Math.random() * quotes.length)]}</span>
                 </>
             }
-            {!loading && <>
-                <h3>Workflow Code:</h3>
-                <pre style={{textAlign: "unset"}}>
-                    {generated_code}
-                </pre>
-            </>}
+            {!loading &&
+                <div style={{textAlign:"unset"}}>
+                    <h3>Workflow Code:</h3>
+                    <pre style={{textAlign: "left"}}>
+                        {generated_code}
+                    </pre>
+            </div>}
         </div>
     )
 }
